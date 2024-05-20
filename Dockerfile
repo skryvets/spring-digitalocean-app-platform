@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM eclipse-temurin:17-jre-alpine as builder
+FROM eclipse-temurin:17-jdk-alpine as builder
 WORKDIR /app
 COPY . /app
 RUN ./gradlew build
