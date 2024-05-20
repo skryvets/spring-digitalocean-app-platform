@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @Slf4j
-public class Controller {
+@RestController
+public class AppController {
 
     @RequestMapping("/")
-    public Map<String, String> hello(@RequestBody String body) {
+    public Map<String, String> hello(@RequestBody(required = false) String body) {
         log.info("Hit Endpoint hello");
         log.info("Response body: {}", body);
         return Map.of("status", "ok");
